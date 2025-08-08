@@ -1,3 +1,9 @@
+function love.update()
+    if love.keyboard.isDown("space") then
+        SwitchScences("game")
+    end
+end
+
 function love.draw()
     a = scores
     for i = 1,#a do

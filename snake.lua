@@ -42,7 +42,7 @@ function Snake:update(dt)
         
         self:directionInput()
 
-        -- 清理过期按键的代码在后面，实现第一次输入就改变方向
+        -- 清理过期按键的代码在后面，这里实现第一次输入就改变方向
         if self.direction[1] == "none" then 
             table.insert(self.face, self.direction[#self.direction])
         elseif self.direction[1] ~= "none" then 
@@ -187,7 +187,7 @@ end
 
 function Snake:nextPosition(direction, X, Y) -- 计算蛇下一步移动在哪的函数 
     if direction[#direction] == "Left" then 
-        if X - 1 == 0 then
+        if X - 1 == 0 then --实现环绕，以下同
             X = map_width
         else
             X = X-1

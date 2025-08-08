@@ -39,22 +39,6 @@ end
 function love.draw()
 
     -- 画地图
-    -- for i=1, map_height+2 do
-    --     if i==1 or i==map_height+2 then
-    --         for j=1, map_width+2 do
-    --             love.graphics.draw(wall, (j-1)*32, (i-1)*32)
-    --         end
-    --     else
-    --         for j=1,map_width+2 do
-    --             if j==1 or j==map_width+2 then
-    --                 love.graphics.draw(wall, (j-1)*32, (i-1)*32)
-    --             else 
-    --                 love.graphics.draw(floor, (j-1)*32, (i-1)*32)
-    --             end
-    --         end
-    --     end
-    -- end
-
     love.graphics.draw(map, 0, 0)
 
     -- 画食物
